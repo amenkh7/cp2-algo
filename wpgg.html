@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function insertionSort(tab) {
+    for (let i = 1; i < tab.length; i++) {
+        let aux=tab[i]
+        let j = i - 1; 
+        while (j >= 0 && tab[j] > aux) {
+            tab[j + 1] = tab[j]; 
+            j--;
+        }
+        tab[j + 1] = aux;
+    }
+    return tab;
+}
+const arr = [5, 2, 9, 1, 5, 6];
+console.log(insertionSort(arr));
+    </script>
+</body>
+</html>
